@@ -8,7 +8,9 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use('/api', router);
-
+app.get("/", (req, res)=>{
+  res.send("Bismillah");
+})
 app.listen(port, () => {
   console.log(`Server has been started at ${port}`);
 });
